@@ -40,9 +40,9 @@
     const title = document.getElementById('titleText');
     const hint = document.getElementById('hintText');
 
-    if (isBirthday) {
+    if (!isBirthday) {
       title.textContent = '🎉 看在妳生日的份上，就只能是妳啦！';
-      hint.textContent = '但妳可以在不是生日的時候回答看看😜\n禮物藏在妳櫃子的後面唷～快去找找吧！🎁';
+      hint.innerHTML = '但妳可以在不是生日的時候回答看看😜<br>禮物藏在妳櫃子的後面唷～快去找找吧！🎁';
     } else {
       title.textContent = '🎀 當然是卡比最可愛，不過我還是給妳照片吧～';
       hint.textContent = ' 🎁 禮物藏在妳櫃子的後面唷，快去找找吧！';

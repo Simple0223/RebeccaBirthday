@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>妳生日我不在 有闖關來相伴</title>
+  <style>
+    body {
+      background-color: #fff0f5;
+      font-family: 'Arial', sans-serif;
+      color: #333;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+    button {
+      display: block;
+      width: 200px;
+      margin: 10px auto;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #ff8fb4;
+      color: white;
+      cursor: pointer;
+    }
+    .message {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #d6336c;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎀 誰最可愛？</h1>
+  <button onclick="checkAnswer('A')">A. 卡比</button>
+  <button onclick="checkAnswer('B')">B. 張茜茜</button>
+  <button onclick="checkAnswer('C')">C. 張岳</button>
+
+  <div id="result" class="message"></div>
+
+  <script>
+    // 判斷今天是不是8月5日
+    const today = new Date();
+    const isBirthday = (today.getMonth() + 1 === 8 && today.getDate() === 5); // 月份從0開始
+
+    function checkAnswer(choice) {
+      const result = document.getElementById('result');
+
+      if ((isBirthday && choice === 'B') || (!isBirthday && choice === 'A')) {
+        // 正確答案，跳轉
+        window.location.href = 'PhotoBooth.html';
+      } else if (choice === 'B') {
+        result.textContent = isBirthday
+          ? '...' // 不會顯示，因為會跳轉
+          : '那麼自信?! 今天不是妳的生日耶～ 再猜猜看吧😆';
+      } else if (choice === 'C') {
+        result.textContent = '答錯囉~ 等過幾年再來比比看吧！🤪';
+      } else if (choice === 'A') {
+        result.textContent = isBirthday
+          ? '雖然我很想這麼說，但今天不是...😢'
+          : '...'; // 不會顯示，因為會跳轉
+      }
+    }
+  </script>
+
+</body>
+</html>

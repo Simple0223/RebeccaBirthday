@@ -58,8 +58,8 @@
 
   <p><strong>神用什麼方式讓我們彼此合一？</strong></p>
 
-  <button onclick="checkAnswer('A')">A. 用釘書機呀</button>
-  <button onclick="checkAnswer('B')">B. 用愛與真理</button>
+  <button onclick="checkAnswer('A')">A. 用愛與真理</button>
+  <button onclick="checkAnswer('B')">B. 用釘書機呀</button>
   <button onclick="checkAnswer('C')">C. 用LINE群組</button>
 
   <div id="feedback" class="message"></div>
@@ -68,12 +68,12 @@
     function checkAnswer(choice) {
       const feedback = document.getElementById('feedback');
 
-      if (choice === 'B') {
-        window.location.href = 'stapler-success.html'; // 下一頁連結
-      } else if (choice === 'A') {
-        feedback.textContent = '耶穌為我們被釘十字架，不代表我們的關係就是釘起來的📎';
+      if (choice === 'A') {
+        window.location.href = 'Stapler.html'; // 下一頁連結
+      } else if (choice === 'B') {
+        feedback.textContent = '耶穌為我們被釘十字架，不代表我們的關係就是釘起來的啦📎 哈哈哈XD';
       } else if (choice === 'C') {
-        feedback.textContent = '很難過，我們的關係竟然是透過群組……😭';
+        feedback.textContent = '我真的很難過，我們的關係竟然是透過群組……😭';
       }
     }
   </script>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>哼哼... 還有第三關唷</title>
+  <style>
+    body {
+      background-color: #fffdf7;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding: 40px;
+      color: #333;
+    }
+    h1 {
+      font-size: 26px;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+    img {
+      max-width: 260px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+    }
+    button {
+      display: block;
+      width: 280px;
+      margin: 10px auto;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #66bb6a;
+      color: white;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    button:hover {
+      background-color: #4caf50;
+    }
+    .message {
+      margin-top: 30px;
+      font-size: 18px;
+      color: #d84315;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>哼哼... 還有第三關唷</h1>
+  <p>我後來才知道妳喜歡的是白色那隻😅<br>
+  但釘書機對祕書來說算實用的吧😁</p>
+
+  <p><strong>我們的力量從何而來？</strong></p>
+
+  <button onclick="checkAnswer('A')">A. 在群組聊天就能得到恢復</button>
+  <button onclick="checkAnswer('B')">B. 用行動電源把能量充飽</button>
+  <button onclick="checkAnswer('C')">C. 靠主喜樂，喜樂的心乃是良藥</button>
+
+  <div id="feedback" class="message"></div>
+
+  <script>
+    function checkAnswer(choice) {
+      const feedback = document.getElementById('feedback');
+      if (choice === 'C') {
+        feedback.textContent = '看來是太簡單了呢！希望妳天天喜樂唷～<br>禮物就藏在我位置右邊，上面的卡比抽屜裡！';
+      } else if (choice === 'A') {
+        feedback.textContent = '群組聊天能暖心，但帶不來真正的恢復喔～💔';
+      } else if (choice === 'B') {
+        feedback.textContent = '行動電源只能充滿裝置，妳不會不知道吧😏';
+      }
+    }
+  </script>
+
+</body>
+</html>

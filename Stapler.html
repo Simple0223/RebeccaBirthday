@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>恭喜妳通過第一關 想不到還有第二關吧！</title>
+  <style>
+    body {
+      background-color: #f0f7ff;
+      font-family: 'Arial', sans-serif;
+      color: #333;
+      text-align: center;
+      padding: 40px;
+    }
+    h1 {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #444;
+    }
+    img {
+      max-width: 250px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+    }
+    button {
+      display: block;
+      width: 240px;
+      margin: 10px auto;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #5fa8d3;
+      color: white;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    button:hover {
+      background-color: #457b9d;
+    }
+    .message {
+      margin-top: 30px;
+      font-size: 18px;
+      color: #c92a2a;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>恭喜妳通過第一關，想不到還有第二關吧！</h1>
+  <p>我發現我沒什麼妳的照片，就用無佳可規裡妳傳的照片囉😎<br>
+  下面附上電子版的，讓妳可以下載起來👍</p>
+
+  <img src="https://github.com/Simple0223/RebeccaBirthday/blob/main/RebeccaPhotoBooth.jpg?raw=true" alt="鏡中仙女的拍貼照">
+
+  <p><strong>神用什麼方式讓我們彼此合一？</strong></p>
+
+  <button onclick="checkAnswer('A')">A. 用釘書機呀</button>
+  <button onclick="checkAnswer('B')">B. 用愛與真理</button>
+  <button onclick="checkAnswer('C')">C. 用LINE群組</button>
+
+  <div id="feedback" class="message"></div>
+
+  <script>
+    function checkAnswer(choice) {
+      const feedback = document.getElementById('feedback');
+
+      if (choice === 'B') {
+        window.location.href = 'stapler-success.html'; // 下一頁連結
+      } else if (choice === 'A') {
+        feedback.textContent = '耶穌為我們被釘十字架，不代表我們的關係就是釘起來的📎';
+      } else if (choice === 'C') {
+        feedback.textContent = '很難過，我們的關係竟然是透過群組……😭';
+      }
+    }
+  </script>
+
+</body>
+</html>

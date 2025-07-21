@@ -2,7 +2,7 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <title>🎉 最可愛揭曉</title>
+  <title>最可愛揭曉🎉</title>
   <style>
     body {
       background-color: #fffbea;
@@ -40,7 +40,7 @@
     const title = document.getElementById('titleText');
     const hint = document.getElementById('hintText');
 
-    if (!isBirthday) {
+    if (isBirthday) {
       title.textContent = '🎉 看在妳生日的份上，就只能是妳啦！';
       hint.innerHTML = '但妳可以在不是生日的時候回答看看😜<br>禮物藏在妳櫃子的後面唷～快去找找吧！🎁';
     } else {

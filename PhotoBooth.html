@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>🎉 最可愛揭曉</title>
+  <style>
+    body {
+      background-color: #fffbea;
+      font-family: 'Arial', sans-serif;
+      color: #333;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+    img {
+      max-width: 300px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    p {
+      font-size: 18px;
+      margin-top: 20px;
+      color: #cc3366;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="titleText">🎉 如果張茜茜是7-11店員 will be like...</h1>
+  <img src="https://github.com/Simple0223/RebeccaBirthday/blob/main/%E5%A6%82%E6%9E%9C%E5%BC%B5%E8%8C%9C%E8%8C%9C%E6%98%AF711%E5%BA%97%E5%93%A1.png?raw=true" alt="7-11的張茜茜">
+  <p id="hintText"></p>
+
+  <script>
+    const today = new Date();
+    const isBirthday = (today.getMonth() + 1 === 8 && today.getDate() === 5);
+
+    const title = document.getElementById('titleText');
+    const hint = document.getElementById('hintText');
+
+    if (isBirthday) {
+      title.textContent = '🎉 看在妳生日的份上，就只能是妳啦！';
+      hint.textContent = '🎁 禮物藏在妳櫃子的後面唷～快去找找吧！';
+    } else {
+      title.textContent = '🎀 當然是卡比最可愛，不過我還是給妳照片吧～';
+      hint.textContent = ' 🎁 禮物藏在妳櫃子的後面唷，快去找找吧！';
+    }
+  </script>
+
+</body>
+</html>

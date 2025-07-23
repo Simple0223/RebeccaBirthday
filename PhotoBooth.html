@@ -2,6 +2,7 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ✅ 手機響應式 -->
   <title>答案揭曉🎉</title>
   <style>
     body {
@@ -9,21 +10,31 @@
       font-family: 'Arial', sans-serif;
       color: #333;
       text-align: center;
-      padding: 50px;
+      padding: 5vw;
     }
     h1 {
-      font-size: 26px;
-      margin-bottom: 20px;
+      font-size: 6vw;
+      margin-bottom: 4vw;
     }
     img {
-      max-width: 300px;
+      width: 90%;
+      max-width: 320px;
       border-radius: 10px;
-      margin-top: 20px;
+      margin-top: 4vw;
     }
     p {
-      font-size: 18px;
-      margin-top: 20px;
+      font-size: 4.5vw;
+      margin-top: 5vw;
       color: #cc3366;
+    }
+
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 28px;
+      }
+      p {
+        font-size: 18px;
+      }
     }
   </style>
 </head>
@@ -45,7 +56,7 @@
       hint.innerHTML = '但妳可以在不是生日的時候回答看看😜<br>禮物藏在妳櫃子的後面唷～快去找找吧！🎁';
     } else {
       title.textContent = '當然是卡比最可愛，不過我還是給妳照片吧～🎀';
-      hint.textContent = ' 禮物藏在妳櫃子的後面唷，快去找找吧！🎁';
+      hint.textContent = '禮物藏在妳櫃子的後面唷，快去找找吧！🎁';
     }
   </script>
 

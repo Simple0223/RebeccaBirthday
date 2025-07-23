@@ -2,6 +2,7 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 🔧 手機排版關鍵 -->
   <title>恭喜妳通過第一關 想不到還有第二關吧！</title>
   <style>
     body {
@@ -9,28 +10,30 @@
       font-family: 'Arial', sans-serif;
       color: #333;
       text-align: center;
-      padding: 40px;
+      padding: 5vw;
     }
     h1 {
-      font-size: 26px;
-      margin-bottom: 20px;
+      font-size: 6vw;
+      margin-bottom: 5vw;
     }
     p {
-      font-size: 18px;
-      margin-bottom: 20px;
+      font-size: 4.5vw;
+      margin-bottom: 4vw;
       color: #444;
     }
     img {
-      max-width: 250px;
+      width: 90%;
+      max-width: 300px;
       border-radius: 12px;
-      margin-bottom: 30px;
+      margin-bottom: 5vw;
     }
     button {
       display: block;
-      width: 240px;
-      margin: 10px auto;
-      padding: 12px;
-      font-size: 16px;
+      width: 90%;
+      max-width: 280px;
+      margin: 3vw auto;
+      padding: 4vw;
+      font-size: 4.5vw;
       border: none;
       border-radius: 8px;
       background-color: #5fa8d3;
@@ -42,9 +45,22 @@
       background-color: #457b9d;
     }
     .message {
-      margin-top: 30px;
-      font-size: 18px;
+      margin-top: 6vw;
+      font-size: 4.5vw;
       color: #c92a2a;
+    }
+
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 28px;
+      }
+      p, .message {
+        font-size: 18px;
+      }
+      button {
+        font-size: 16px;
+        padding: 12px;
+      }
     }
   </style>
 </head>

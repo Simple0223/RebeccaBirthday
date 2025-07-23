@@ -81,11 +81,11 @@
     function checkAnswer(choice) {
       const feedback = document.getElementById('feedback');
       if (choice === 'C') {
-        feedback.innerHTML = '看來是太簡單了呢！希望妳天天喜樂唷～😁<br>禮物藏在我位置的卡比衛生紙盒裡🧻';
+        feedback.innerHTML = '看來是太簡單了呢！<br>希望妳天天喜樂唷～😁<br>禮物藏在我位置的卡比衛生紙盒裡🧻';
       } else if (choice === 'A') {
-        feedback.textContent = '群組聊天能暖心，但帶不來真正的恢復喔～💔';
+        feedback.innerHTML = '群組聊天能暖心，<br>但帶不來真正的恢復喔～💔';
       } else if (choice === 'B') {
-        feedback.textContent = '行動電源只能充滿裝置，妳不會不知道吧😏';
+        feedback.innerHTML = '行動電源只能充滿裝置，<br>妳不會不知道吧😏';
       }
     }
   </script>

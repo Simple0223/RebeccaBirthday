@@ -2,34 +2,37 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ✅ 手機響應式 -->
   <title>哼哼... 還有第三關唷</title>
   <style>
     body {
       background-color: #fffdf7;
       font-family: 'Arial', sans-serif;
       text-align: center;
-      padding: 40px;
+      padding: 5vw;
       color: #333;
     }
     h1 {
-      font-size: 26px;
-      margin-bottom: 15px;
+      font-size: 6vw;
+      margin-bottom: 4vw;
     }
     p {
-      font-size: 18px;
-      margin-bottom: 25px;
+      font-size: 4.5vw;
+      margin-bottom: 5vw;
     }
     img {
+      width: 90%;
       max-width: 260px;
-      margin-bottom: 30px;
+      margin-bottom: 6vw;
       border-radius: 10px;
     }
     button {
       display: block;
-      width: 280px;
-      margin: 10px auto;
-      padding: 12px;
-      font-size: 16px;
+      width: 90%;
+      max-width: 300px;
+      margin: 3vw auto;
+      padding: 4vw;
+      font-size: 4.5vw;
       border: none;
       border-radius: 8px;
       background-color: #66bb6a;
@@ -41,9 +44,22 @@
       background-color: #4caf50;
     }
     .message {
-      margin-top: 30px;
-      font-size: 18px;
+      margin-top: 6vw;
+      font-size: 4.5vw;
       color: #d84315;
+    }
+
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 28px;
+      }
+      p, .message {
+        font-size: 18px;
+      }
+      button {
+        font-size: 16px;
+        padding: 12px;
+      }
     }
   </style>
 </head>

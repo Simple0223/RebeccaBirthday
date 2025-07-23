@@ -69,14 +69,14 @@
       if ((isBirthday && choice === 'B') || (!isBirthday && choice === 'A')) {
         window.location.href = 'PhotoBooth';
       } else if (choice === 'B') {
-        result.textContent = isBirthday
+        result.innerHTML = isBirthday
           ? ''
-          : '那麼自信?! 今天不是妳的生日耶～ 再猜猜看吧😆';
+          : '那麼自信?! 今天不是妳的生日耶～<br>再猜猜看吧😆';
       } else if (choice === 'C') {
-        result.textContent = '答錯囉~ 等過幾年再來比比看吧！🤪';
+        result.innerHTML = '答錯囉~<br>等過幾年再來比比看吧！🤪';
       } else if (choice === 'A') {
-        result.textContent = isBirthday
-          ? '雖然我很想這麼說，但今天不是...😢'
+        result.innerHTML = isBirthday
+          ? '雖然我很想這麼說，<br>但今天不是...😢'
           : '';
       }
     }

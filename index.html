@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>妳生日我不在 由闖關來相伴</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      background-image: url('https://github.com/Simple0223/RebeccaBirthday/blob/main/fbg1.jpg?raw=true'); /* 手機預設 */
+      background-image: url('https://github.com/Simple0223/RebeccaBirthday/blob/main/fbg1.jpg?raw=true');
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      background-attachment: fixed; /* 圖片不滾動 */
+      background-attachment: fixed;
       font-family: 'Arial', sans-serif;
       color: #333;
       text-align: center;
@@ -36,10 +36,11 @@
       margin-top: 4vw;
       margin-bottom: 6vw;
       max-width: 90%;
+      display: inline-block;
       word-break: break-word;
       white-space: normal;
       line-height: 1.6;
-      text-align: left;
+      text-align: center; /* ⭐️ 關鍵：讓文字置中 */
     }
 
     button {
@@ -71,22 +72,14 @@
       text-align: center;
     }
 
-    /* 桌機樣式（橫式背景圖 + 元件大小調整） */
     @media (orientation: landscape) {
       body {
         background-image: url('https://github.com/Simple0223/RebeccaBirthday/blob/main/wbg1.jpg?raw=true');
       }
-     h1 {
+
+      h1 {
         font-size: 28px;
         margin-bottom: 1vw;
-      }
-
-      p {
-        margin-bottom: 1vw;
-      }
-
-      .message {
-        margin-top: 2vw;
       }
 
       p, .message {
@@ -104,20 +97,17 @@
 </head>
 <body>
 
-  <div>
-    <h1>妳生日我不在 由闖關來相伴</h1>
-  </div>
+  <h1>妳生日我不在 由闖關來相伴</h1>
 
-  <div>
-    <p>
-      恭喜吾之好友張茜茜生日<br>
-      生日快樂啦~<br>
-      我雖遠在服務隊，但還是能祝福妳的滴！<br>
-      請回答下面的問題：
-    </p>
-  </div>
+  <p>
+    恭喜吾之好友張茜茜生日🎉<br>
+    生日快樂啦～<br>
+    我雖遠在服務隊，但還是能祝福妳的滴！<br>
+    請回答下面的問題：
+  </p>
 
   <h1>以下三位誰最可愛？</h1>
+
   <button onclick="checkAnswer('A')">A. 卡比</button>
   <button onclick="checkAnswer('B')">B. 張茜茜</button>
   <button onclick="checkAnswer('C')">C. 張岳</button>
@@ -130,19 +120,24 @@
 
     function checkAnswer(choice) {
       const result = document.getElementById('result');
+      result.style.display = 'inline-block';
 
-      if ((isBirthday && choice === 'B') || (!isBirthday && choice === 'A')) {
-        window.location.href = 'PhotoBooth.html'; // 請記得加 .html
-      } else if (choice === 'B') {
-        result.innerHTML = isBirthday
-          ? ''
-          : '那麼自信?! 今天不是妳的生日耶～<br>再猜猜看吧😆';
-      } else if (choice === 'C') {
-        result.innerHTML = '答錯囉~<br>等過幾年再來比比看吧！🤪';
-      } else if (choice === 'A') {
-        result.innerHTML = isBirthday
-          ? '雖然我很想這麼說，<br>但今天不是...😢'
-          : '';
+      if (isBirthday) {
+        if (choice === 'B') {
+          window.location.href = 'PhotoBooth.html';
+        } else if (choice === 'A') {
+          result.innerHTML = '雖然我很想這麼說，<br>但今天不是卡比的生日喔😢';
+        } else if (choice === 'C') {
+          result.innerHTML = '答錯囉～<br>等過幾年再來比比看吧！🤪';
+        }
+      } else {
+        if (choice === 'A') {
+          window.location.href = 'PhotoBooth.html';
+        } else if (choice === 'B') {
+          result.innerHTML = '那麼自信?! 今天不是妳的生日耶～<br>再猜猜看吧😆';
+        } else if (choice === 'C') {
+          result.innerHTML = '答錯囉～<br>等過幾年再來比比看吧！🤪';
+        }
       }
     }
   </script>

@@ -2,7 +2,7 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 🔧 手機排版關鍵 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>想不到還有第二關吧！</title>
   <style>
     body {
@@ -12,21 +12,25 @@
       text-align: center;
       padding: 5vw;
     }
+
     h1 {
       font-size: 6vw;
       margin-bottom: 5vw;
     }
+
     p {
       font-size: 4.5vw;
       margin-bottom: 4vw;
       color: #444;
     }
-    img {
+
+    img.photobooth {
       width: 90%;
       max-width: 300px;
       border-radius: 12px;
       margin-bottom: 5vw;
     }
+
     button {
       display: block;
       width: 90%;
@@ -41,31 +45,58 @@
       cursor: pointer;
       transition: 0.2s;
     }
+
     button:hover {
       background-color: #457b9d;
     }
+
     .message {
       margin-top: 6vw;
       font-size: 4.5vw;
       color: #c92a2a;
     }
 
+    /* 包裝內容的區塊 */
+    .content {
+      display: block;
+    }
+
+    /* Landscape 模式使用左右排版 */
     @media (orientation: landscape) {
       h1 {
         font-size: 28px;
         margin-bottom: 1vw;
       }
+
       p, .message {
         font-size: 18px;
         margin-bottom: 1vw;
+        text-align: left;
       }
+
       button {
         font-size: 16px;
         padding: 12px;
-        margin: 1vw auto;
+        margin: 1vw 0;
+        text-align: left;
       }
-        img {
-        margin-bottom: 1vw;
+
+      .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 3vw;
+        text-align: left;
+      }
+
+      .text {
+        flex: 1;
+      }
+
+      img.photobooth {
+        flex: 0 0 40%;
+        max-width: 40%;
+        margin-bottom: 0;
       }
     }
   </style>
@@ -73,22 +104,27 @@
 <body>
 
   <h1>想不到還有第二關吧！</h1>
-  <p>如妳所願幫妳做了一個。
-    <br>我發現我沒什麼妳的照片，
-    <br>就用無佳可規裡妳傳的照片囉😎
-    <br>下面附上電子版的，讓妳可以下載起來👍
-    <br>記得滑到最下面唷👇
-  </p>
 
-  <img src="https://github.com/Simple0223/RebeccaBirthday/blob/main/RebeccaPhotoBooth.jpg?raw=true" alt="鏡中仙女的拍貼照">
+  <div class="content">
+    <div class="text">
+      <p>如妳所願幫妳做了一個。
+        <br>我發現我沒什麼妳的照片，
+        <br>就用無佳可規裡妳傳的照片囉😎
+        <br>下面附上電子版的，讓妳可以下載起來👍
+        <br>記得滑到最下面唷👇
+      </p>
 
-  <p><strong>2. 我們的關係為什麼會很好呢？</strong></p>
+      <p><strong>2. 我們的關係為什麼會很好呢？</strong></p>
 
-  <button onclick="checkAnswer('A')">A. 神用愛與真理來引導的呀</button>
-  <button onclick="checkAnswer('B')">B. 當然是用釘書機釘起來呀</button>
-  <button onclick="checkAnswer('C')">C. 因為常在LINE群組上閒聊囉</button>
+      <button onclick="checkAnswer('A')">A. 神用愛與真理來引導的呀</button>
+      <button onclick="checkAnswer('B')">B. 當然是用釘書機釘起來呀</button>
+      <button onclick="checkAnswer('C')">C. 因為常在LINE群組上閒聊囉</button>
 
-  <div id="feedback" class="message"></div>
+      <div id="feedback" class="message"></div>
+    </div>
+
+    <img src="https://github.com/Simple0223/RebeccaBirthday/blob/main/RebeccaPhotoBooth.jpg?raw=true" alt="鏡中仙女的拍貼照" class="photobooth">
+  </div>
 
   <script>
     function checkAnswer(choice) {

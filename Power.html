@@ -6,25 +6,32 @@
   <title>哼哼... 還有第三關唷</title>
   <style>
     body {
-      background-color: #fffdf7;
+      margin: 0;
+      padding: 0;
+      background-image: url('https://github.com/Simple0223/RebeccaBirthday/blob/main/fbg1.jpg?raw=true'); /* 手機預設 */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed; /* 圖片不滾動 */
       font-family: 'Arial', sans-serif;
+      color: #333;
       text-align: center;
       padding: 5vw;
-      color: #333;
     }
     h1 {
       font-size: 6vw;
-      margin-bottom: 4vw;
+      margin-bottom: 6vw;
+      background-color: rgba(255, 255, 255, 0.6);
+      display: inline-block;
+      padding: 1vw 2vw;
+      border-radius: 10px;
     }
     p {
-      font-size: 4.5vw;
-      margin-bottom: 5vw;
-    }
-    img {
-      width: 90%;
-      max-width: 260px;
-      margin-bottom: 6vw;
+      background-color: rgba(255, 255, 255, 0.6);
+      padding: 3vw;
       border-radius: 10px;
+      font-size: 4.5vw;
+      margin-bottom: 6vw;
     }
     button {
       display: block;
@@ -38,7 +45,6 @@
       background-color: #66bb6a;
       color: white;
       cursor: pointer;
-      transition: 0.2s;
     }
     button:hover {
       background-color: #4caf50;
@@ -50,15 +56,21 @@
     }
 
     @media (min-width: 768px) {
+      body {
+        background-image: url('https://github.com/Simple0223/RebeccaBirthday/blob/main/wbg1.jpg?raw=true');
+      }
       h1 {
         font-size: 28px;
+        margin-bottom: 1vw;
       }
-      p, .message {
+      p {
         font-size: 18px;
+        margin-bottom: 1vw;
       }
       button {
         font-size: 16px;
         padding: 12px;
+        margin: 1vw auto;
       }
     }
   </style>

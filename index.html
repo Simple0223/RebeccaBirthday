@@ -21,7 +21,7 @@
 
     h1 {
       font-size: 6vw;
-      margin-bottom: 6vw;
+      margin-bottom: 4vw;
       background-color: rgba(255, 255, 255, 0.6);
       display: inline-block;
       padding: 1vw 2vw;
@@ -33,10 +33,13 @@
       padding: 3vw;
       border-radius: 10px;
       font-size: 4.5vw;
+      margin-top: 4vw;
       margin-bottom: 6vw;
       max-width: 90%;
-      margin-left: auto;
-      margin-right: auto;
+      word-break: break-word;
+      white-space: normal;
+      line-height: 1.6;
+      text-align: left;
     }
 
     button {
@@ -54,15 +57,18 @@
     }
 
     .message {
-      margin-top: 5vw;
-      font-size: 5vw;
+      display: none;
+      font-size: 4.5vw;
       color: #d6336c;
-      padding: 2vw;
       background-color: rgba(255, 255, 255, 0.6);
-      max-width: 90%;
-      margin-left: auto;
-      margin-right: auto;
+      padding: 1vw 2vw;
       border-radius: 10px;
+      margin-top: 4vw;
+      max-width: 90%;
+      word-break: break-word;
+      white-space: normal;
+      line-height: 1.6;
+      text-align: center;
     }
 
     /* 桌機樣式（橫式背景圖 + 元件大小調整） */
@@ -70,21 +76,28 @@
       body {
         background-image: url('https://github.com/Simple0223/RebeccaBirthday/blob/main/wbg1.jpg?raw=true');
       }
-      h1 {
+     h1 {
         font-size: 28px;
         margin-bottom: 1vw;
       }
+
       p {
+        margin-bottom: 1vw;
+      }
+
+      .message {
+        margin-top: 2vw;
+      }
+
+      p, .message {
         font-size: 18px;
         margin-bottom: 1vw;
       }
+
       button {
         font-size: 16px;
         padding: 12px;
         margin: 1vw auto;
-      }
-      .message {
-        font-size: 18px;
       }
     }
   </style>

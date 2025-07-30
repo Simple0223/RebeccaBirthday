@@ -2,22 +2,23 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ✅ 手機響應式 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>哼哼... 還有第三關唷</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      background-image: url('https://github.com/Simple0223/RebeccaBirthday/blob/main/fbg1.jpg?raw=true'); /* 手機預設 */
+      background-image: url('https://github.com/Simple0223/RebeccaBirthday/blob/main/fbg1.jpg?raw=true');
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      background-attachment: fixed; /* 圖片不滾動 */
+      background-attachment: fixed;
       font-family: 'Arial', sans-serif;
       color: #333;
       text-align: center;
       padding: 5vw;
     }
+
     h1 {
       font-size: 6vw;
       margin-bottom: 6vw;
@@ -26,16 +27,18 @@
       padding: 1vw 2vw;
       border-radius: 10px;
     }
+
     p {
       background-color: rgba(255, 255, 255, 0.6);
       padding: 3vw;
       border-radius: 10px;
       font-size: 4.5vw;
       margin-bottom: 6vw;
+      display: inline-block;
+      width: fit-content;
       max-width: 90%;
-      margin-left: auto;
-      margin-right: auto;
     }
+
     button {
       display: block;
       width: 90%;
@@ -49,18 +52,22 @@
       color: white;
       cursor: pointer;
     }
+
     button:hover {
       background-color: #4caf50;
     }
+
     .message {
       font-size: 4.5vw;
       color: #d84315;
       background-color: rgba(255, 255, 255, 0.6);
-      max-width: 90%;
-      margin-left: auto;
-      margin-right: auto;
       padding: 1vw 2vw;
       border-radius: 10px;
+      display: none; /* 預設隱藏 */
+      margin-top: 4vw;
+      display: inline-block;
+      width: fit-content;
+      max-width: 90%;
     }
 
     @media (orientation: landscape) {
@@ -100,6 +107,8 @@
   <script>
     function checkAnswer(choice) {
       const feedback = document.getElementById('feedback');
+      feedback.style.display = 'inline-block';
+
       if (choice === 'C') {
         feedback.innerHTML = '看來是太簡單了呢！<br>希望妳天天喜樂唷～😁<br>禮物藏在我位置的卡比衛生紙盒裡🧻';
       } else if (choice === 'A') {

@@ -2,20 +2,40 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 加這行 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>妳生日我不在 由闖關來相伴</title>
   <style>
     body {
-      background-color: #fff0f5;
+      margin: 0;
+      padding: 0;
+      background-image: url('你的直式背景圖.jpg'); /* 手機預設 */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed; /* 圖片不滾動 */
       font-family: 'Arial', sans-serif;
       color: #333;
       text-align: center;
       padding: 5vw;
     }
+
     h1 {
-      font-size: 6vw; /* 使用相對大小，適應手機 */
+      font-size: 6vw;
+      margin-bottom: 6vw;
+      background-color: rgba(255, 255, 255, 0.6);
+      display: inline-block;
+      padding: 1vw 2vw;
+      border-radius: 10px;
+    }
+
+    p {
+      background-color: rgba(255, 255, 255, 0.6);
+      padding: 3vw;
+      border-radius: 10px;
+      font-size: 4.5vw;
       margin-bottom: 6vw;
     }
+
     button {
       display: block;
       width: 80%;
@@ -29,16 +49,26 @@
       color: white;
       cursor: pointer;
     }
+
     .message {
       margin-top: 5vw;
       font-size: 5vw;
       color: #d6336c;
+      background-color: rgba(255, 255, 255, 0.6);
+      padding: 2vw;
+      border-radius: 10px;
     }
 
-    /* 平板或桌機可以設定固定大小 */
+    /* 桌機樣式（橫式背景圖 + 元件大小調整） */
     @media (min-width: 768px) {
+      body {
+        background-image: url('你的橫式背景圖.jpg');
+      }
       h1 {
         font-size: 28px;
+      }
+      p {
+        font-size: 18px;
       }
       button {
         font-size: 16px;
@@ -53,11 +83,14 @@
 <body>
 
   <h1>妳生日我不在 由闖關來相伴</h1>
-  <p>恭喜吾之好友張茜茜生日
-    <br>生日快樂啦~
-    <br>我雖遠在服務隊，但還是能祝福妳的滴！
-    <br>請回答下面的問題：
+
+  <p>
+    恭喜吾之好友張茜茜生日<br>
+    生日快樂啦~<br>
+    我雖遠在服務隊，但還是能祝福妳的滴！<br>
+    請回答下面的問題：
   </p>
+
   <h1>以下三位誰最可愛？</h1>
   <button onclick="checkAnswer('A')">A. 卡比</button>
   <button onclick="checkAnswer('B')">B. 張茜茜</button>
@@ -73,7 +106,7 @@
       const result = document.getElementById('result');
 
       if ((isBirthday && choice === 'B') || (!isBirthday && choice === 'A')) {
-        window.location.href = 'PhotoBooth';
+        window.location.href = 'PhotoBooth.html'; // 請記得加 .html
       } else if (choice === 'B') {
         result.innerHTML = isBirthday
           ? ''

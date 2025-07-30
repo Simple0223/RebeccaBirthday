@@ -35,8 +35,11 @@
       font-size: 4.5vw;
       margin-bottom: 6vw;
       display: inline-block;
-      width: fit-content;
       max-width: 90%;
+      word-break: break-word;
+      white-space: normal;
+      line-height: 1.6;
+      text-align: left;
     }
 
     button {
@@ -51,6 +54,7 @@
       background-color: #66bb6a;
       color: white;
       cursor: pointer;
+      transition: background-color 0.3s;
     }
 
     button:hover {
@@ -58,30 +62,35 @@
     }
 
     .message {
+      display: none;
       font-size: 4.5vw;
       color: #d84315;
       background-color: rgba(255, 255, 255, 0.6);
       padding: 1vw 2vw;
       border-radius: 10px;
-      display: none; /* 預設隱藏 */
       margin-top: 4vw;
-      display: inline-block;
-      width: fit-content;
       max-width: 90%;
+      word-break: break-word;
+      white-space: normal;
+      line-height: 1.6;
+      text-align: center;
     }
 
     @media (orientation: landscape) {
       body {
         background-image: url('https://github.com/Simple0223/RebeccaBirthday/blob/main/wbg1.jpg?raw=true');
       }
+
       h1 {
         font-size: 28px;
         margin-bottom: 1vw;
       }
+
       p, .message {
         font-size: 18px;
         margin-bottom: 1vw;
       }
+
       button {
         font-size: 16px;
         padding: 12px;
@@ -93,8 +102,11 @@
 <body>
 
   <h1>哼哼... 還有第三關唷</h1>
-  <p>我後來才知道妳喜歡的是白色那隻😅<br>
-  但釘書機對祕書來說算實用的吧😁</p>
+
+  <p>
+    我後來才知道妳喜歡的是白色那隻😅<br>
+    但釘書機對祕書來說算實用的吧😁
+  </p>
 
   <p><strong>3. 我們的力量從何而來？</strong></p>
 
